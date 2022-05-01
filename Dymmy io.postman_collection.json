@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "e579c49a-11e6-43ea-956c-6a2f549ab9cb",
+		"name": "Dymmy io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET запросы",
+			"item": [
+				{
+					"name": "Получение списка пользователей",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "620148a89958b63a67331ea2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Поиск определенного пользователя по ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "620148a89958b63a67331ea2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user/626c4f2d49ac47465be1064e",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user",
+								"626c4f2d49ac47465be1064e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Список пользователей определенное количество страниц и записей",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "620148a89958b63a67331ea2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"dr\",\r\n\"firstName\": \"TESTOVIY\",\r\n\"lastName\": \"TESTOVIY\",\r\n\"gender\": \"other\",\r\n\"email\": \"asdasd@mail.ru\",\r\n\"dateOfBirth\": \"12/11/1997\",\r\n\"phone\": \"89285663463\",\r\n\"picture\": \"vk.com\",\r\n\"location\":\r\n{\r\n\"street\": \"Lenina\",\r\n\"city\": \"Makhachkala\",\r\n\"state\": \"Dagestan\",\r\n\"country\": \"Russia\",\r\n\"timezone\": \"+7:00\"\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user/626c4f2d49ac47465be1064e",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user",
+								"626c4f2d49ac47465be1064e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST запросы",
+			"item": [
+				{
+					"name": "Создание пользователя",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "620148a89958b63a67331ea2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"dr\",\r\n\"firstName\": \"TESTOVIY\",\r\n\"lastName\": \"TESTOVIY\",\r\n\"gender\": \"other\",\r\n\"email\": \"asdasd@mail.ru\",\r\n\"dateOfBirth\": \"12/11/1997\",\r\n\"phone\": \"89285663463\",\r\n\"picture\": \"vk.com\",\r\n\"location\":\r\n{\r\n\"street\": \"Lenina\",\r\n\"city\": \"Makhachkala\",\r\n\"state\": \"Dagestan\",\r\n\"country\": \"Russia\",\r\n\"timezone\": \"+7:00\"\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user/create",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT запросы",
+			"item": [
+				{
+					"name": "Изменение данных пользователя",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "620148a89958b63a67331ea2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"dr\",\r\n\"firstName\": \"TESTOVIY\",\r\n\"lastName\": \"TESTOVIY\",\r\n\"gender\": \"other\",\r\n\"dateOfBirth\": \"12/11/1997\",\r\n\"phone\": \"89285663463\",\r\n\"picture\": \"vk.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109cc",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user",
+								"60d0fe4f5311236168a109cc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DEL запросы",
+			"item": [
+				{
+					"name": "Удаление пользователя",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "620148a89958b63a67331ea2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109db",
+							"protocol": "https",
+							"host": [
+								"dummyapi",
+								"io"
+							],
+							"path": [
+								"data",
+								"v1",
+								"user",
+								"60d0fe4f5311236168a109db"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
